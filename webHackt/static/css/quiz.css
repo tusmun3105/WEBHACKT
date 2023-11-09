@@ -1,7 +1,8 @@
 #questionText{
 
-    font-size:2.5rem;
-    margin-bottom: 1em;
+    font-size:2.3rem;
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
 
 }
 
@@ -12,4 +13,23 @@
 
 .answer{
     margin-bottom: 1em;
+    font-size: 1.1rem;
+}
+
+.submit-button-red{
+    background: #EE5007;
+    color:white;
+    padding-top: .8em;
+    padding-bottom: .8em;
+}
+
+
+.correct-answer-container p {
+
+    text-align: center;
+    color:rgb(85, 141, 0)
+}
+
+.question-container{
+    margin-bottom: 2em;
 }
