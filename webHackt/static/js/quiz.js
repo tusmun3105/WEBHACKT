@@ -4,10 +4,10 @@ const questions = [
         type : "text",
         choices: ["To support cybercriminal activities", "Try to give money", "To prevent fraud"],
         correctAnswer: "To prevent fraud",
-        message:'To prevent fraud'
+        message:"To prevent fraud"
     },
     {
-        question: "What is the largest mammal in the world?",
+        question: "Is this email legitimate?",
         type : "image",
         correctAnswer: "Yes",
         path:'static/images/imagesQues/smallemail.png',
@@ -74,7 +74,7 @@ $(document).ready(function(){
             value = $("input[name='fav_language']:checked").val();
             if(value == questions[currentQuestionIndex]['correctAnswer'])
             {
-                $("#correctAnswer").text("Correct" + questions[currentQuestionIndex]['message']);
+                $("#correctAnswer").text("Correct! " + questions[currentQuestionIndex]['message']);
                 $("#correctAnswer").css("color", "green");
                 $(this).text("Next");
                 currentQuestionIndex++;
@@ -82,7 +82,7 @@ $(document).ready(function(){
             }
             else
             {   
-                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['message'];
+                text = "Wrong!  " + questions[currentQuestionIndex]['message'];
                 $("#correctAnswer").text(text);
                 $("#correctAnswer").css("color", "red");
                 $(this).text("Next");
@@ -154,7 +154,7 @@ $(document).ready(function(){
                 currentQuestionIndex++;
                 score++;
             } else {
-                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['message'];
+                text = "Wrong!! " + questions[currentQuestionIndex]['message'];
                 $("#correctAnswer").text(text);
                 $("#correctAnswer").css("color", "red");
                 imageSrc =questions[currentQuestionIndex]['correctPath']

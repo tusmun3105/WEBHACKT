@@ -241,7 +241,9 @@ strong {
   border-radius: var(--border-radius-medium);
   padding: 3em;
   width: 60%;
+  
   margin: auto;
+  margin-top: 1em;
 }
 
 .nav-tabs {
