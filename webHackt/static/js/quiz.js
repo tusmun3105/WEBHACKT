@@ -42,6 +42,7 @@ const questions = [
 // }
 
 let currentQuestionIndex = 0;
+let numQuestion = questions.length;
 let score = 0 ;
 
 $(document).ready(function(){
@@ -51,6 +52,7 @@ $(document).ready(function(){
         NextText = "Next";
         TextType = "text";
         ImageType = "image";
+        showScore = "Show score";
         BtnText=$(this).text();
 
         if(BtnText == SubmitText){
@@ -71,7 +73,8 @@ $(document).ready(function(){
             }
         }
         else if (BtnText == NextText)
-        {
+        {   
+            if (currentQuestionIndex <= numQuestion-1){ 
             $("#questionText").text(questions[currentQuestionIndex]['question']);
             //$(this).text("Submit");
             $("#correctAnswer").text("");
@@ -107,6 +110,12 @@ $(document).ready(function(){
                 $(this).hide();
                 $('.image-question-buttons').show();
             }
+        } else{
+            text = `out of ` + numQuestion;
+            $('.scoreScreen').show();
+            $('#score').text(score);
+            $(this). attr('disabled', true);
+        }
     }
     
     });
@@ -135,6 +144,13 @@ $(document).ready(function(){
             $("#submitButton").text("Next");
 
         });
+
+        $(document).ready(function(){
+            $("#retakeButton").click(function(){
+                window.location.href = "http://localhost:5000/trial";
+            });
+        });
+        
        
 
   });
