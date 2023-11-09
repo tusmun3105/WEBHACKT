@@ -48,6 +48,7 @@ let score = 0 ;
 $(document).ready(function(){
 
     $("#submitButton").click(function(){
+        $(window).scrollTop(0);
         SubmitText = "Submit";
         NextText = "Next";
         TextType = "text";
@@ -73,7 +74,9 @@ $(document).ready(function(){
             }
         }
         else if (BtnText == NextText)
+        
         {   
+            
             if (currentQuestionIndex <= numQuestion-1){ 
             $("#questionText").text(questions[currentQuestionIndex]['question']);
             //$(this).text("Submit");
@@ -96,6 +99,7 @@ $(document).ready(function(){
                            
                 $(".text-question").html(text);     
             }
+            
             else if(questions[currentQuestionIndex]['type'] == ImageType)
             {   
                 if ($('.text-question').is(':visible')) {
