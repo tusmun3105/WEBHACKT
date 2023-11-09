@@ -44,3 +44,37 @@
 
     gap: 2em;
 }
+
+#scoreTitle{
+
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 1em;
+    margin-bottom: .6em;
+
+}
+
+#scoreText{
+    text-align: center;
+    font-size: 2.2rem;
+    word-spacing: .2rem;
+    font-weight: 400;
+}
+
+#score{
+    font-size: 2.8rem;
+    color: lightgreen;
+    font-weight: bold;
+    
+}
+
+.advice-container{
+    margin-top: 4em;
+    text-align: center;
+    color:rgb(85, 141, 0)   
+}
+
+#retakeButton{
+
+    margin-top: 3em;
+}
