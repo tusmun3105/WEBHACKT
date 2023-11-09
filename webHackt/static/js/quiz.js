@@ -30,8 +30,6 @@ const questions = [
 
 ];
 
-let currentQuestionIndex = 0;
-
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionText.textContent = currentQuestion.question;
@@ -41,9 +39,12 @@ function showQuestion() {
 
 $(document).ready(function(){
 
+    let currentQuestionIndex = 0;
       $(".form-control").click(function(){
         SubmitText = "Submit";
         NextText = "Next";
+        TextType = "text";
+        ImageType = "image";
         BtnText=$(this).text();
         if(BtnText == SubmitText){
             value = $("input[name='fav_language']:checked").val();
@@ -65,9 +66,25 @@ $(document).ready(function(){
         {
             $("#questionText").text(questions[currentQuestionIndex]['question'])
             $(this).text("Submit");
+            $("#correctAnswer").text("");
+            if(questions[currentQuestionIndex]['type'] == TextType)
+            {
+                var length = questions[currentQuestionIndex]['choices'].length;
+                text = ``;
+                for (let i = 0; i < length; i++)
+                {
+                    text = text+`<div class="answer"><input type="radio" id="ans`+i+`" name="fav_language" value="`+questions[currentQuestionIndex]['choices'][i]+`">
+                           <label for="ans`+i+`">`+questions[currentQuestionIndex]['choices'][i]+`</label></div>` 
+                  
+                }
+                           
+                $(".text-question").html(text);     
+            }
+            else if(questions[currentQuestionIndex]['type'] == ImageType)
+            {
 
-
-        }
+            }
+    }
     
         //let newHeader =questions[1]['question'];
         //$("#questionText").text(newHeader);
