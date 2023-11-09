@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Festava Live - Bootstrap 5 CSS Template</title>
+    <title>Online Fraud Awareness</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +23,8 @@
 
     <link href="static/css/templatemo-festava-live.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!--
 
 TemplateMo 583 Festava Live
@@ -30,32 +32,60 @@ TemplateMo 583 Festava Live
 https://templatemo.com/tm-583-festava-live
 
 -->
+<style> .gallery {
+    --s: 150px; /* control the size */
+    
+    display: grid;
+    gap: 10px; /* control the gap */
+    grid: auto-flow var(--s)/repeat(3,var(--s));
+    place-items: center;
+    margin: calc(var(--s)/4);
+  }
+  .gallery > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .gallery > img:nth-child(odd) {
+    border-radius: 50%;
+    width: 141%;
+  }
+  .gallery > img:nth-child(even) {
+    --_r: calc(var(--s)/1.414) at;
+    --_g: calc(var(--s)/-2),#000 99%,#0000;
+    --_m:
+      radial-gradient(var(--_r) left 50% bottom var(--_g)),
+      radial-gradient(var(--_r) left 50% top    var(--_g)),
+      radial-gradient(var(--_r) top  50% right  var(--_g)),
+      radial-gradient(var(--_r) top  50% left   var(--_g)),
+      linear-gradient(#000 0 0);
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+  }
+  
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    place-content: center;
+    
+  }</style>
 </head>
 
 <body>
 
     <main>
 
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
 
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-person custom-icon me-2"></i>
-                            <strong class="text-dark">Welcome to Music Festival 2023</strong>
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </header>
 
 
         <nav class="navbar navbar-expand-lg">
             <div class="container">
+                <i class="fa fa-shield" aria-hidden="true" style="font-size:60px; margin-right:20px; color:white;"></i>
                 <a class="navbar-brand" href="index.html">
-                    Festava Live
+                    Online Fraud Awareness
                 </a>
 
                 <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>
@@ -71,28 +101,14 @@ https://templatemo.com/tm-583-festava-live
                             <a class="nav-link click-scroll" href="#section_1">Home</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
-                        </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Artists</a>
+                            <a class="nav-link click-scroll" href="#section_3">Chat Bot</a>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Schedule</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Pricing</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
-                        </li>
                     </ul>
 
-                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a>
+                    <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Take Quiz</a>
                 </div>
             </div>
         </nav>
@@ -105,50 +121,27 @@ https://templatemo.com/tm-583-festava-live
                 <div class="row">
 
                     <div class="col-12 mt-auto mb-5 text-center">
-                        <small>Festava Live Presents</small>
 
-                        <h1 class="text-white mb-5">Night Live 2023</h1>
+                        <h1 class="text-white mb-5" style="font-size: 35px;">Over 1.5 million people <br/>fell victim to online fraud in 2021
+                        </h1>
 
-                        <a class="btn custom-btn smoothscroll" href="#section_2">Let's begin</a>
+                        <a class="btn custom-btn smoothscroll" href="#section_2">Learn More</a>
                     </div>
 
                     <div class="col-lg-12 col-12 mt-auto d-flex flex-column flex-lg-row text-center">
                         <div class="date-wrap">
-                            <h5 class="text-white">
-                                <i class="custom-icon bi-clock me-2"></i>
-                                10 - 12<sup>th</sup>, Dec 2023
-                            </h5>
+                
                         </div>
 
                         <div class="location-wrap mx-auto py-3 py-lg-0">
                             <h5 class="text-white">
                                 <i class="custom-icon bi-geo-alt me-2"></i>
-                                National Center, United States
+                                Mauritius, Spoon Consulting Ltd
                             </h5>
                         </div>
 
                         <div class="social-share">
-                            <ul class="social-icon d-flex align-items-center justify-content-center">
-                                <span class="text-white me-3">Share:</span>
 
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-facebook"></span>
-                                    </a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-twitter"></span>
-                                    </a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link">
-                                        <span class="bi-instagram"></span>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -189,20 +182,28 @@ https://templatemo.com/tm-583-festava-live
 
                     <div class="col-lg-6 col-12">
                         <div class="about-text-wrap">
-                            <img src="images/pexels-alexander-suhorucov-6457579.jpg" class="about-image img-fluid">
-
-                            <div class="about-text-info d-flex">
+                            <div class="gallery">
+                                <img src="../static/images/collage/cyber-theft-senior-fraud-GIF.gif" alt="a wolve">
+                                <img src="">
+                                <img src="../static/images/collage/malwarecollage.gif" alt="a tiger">
+                                <img src="../static/images/collage/empty.gif" alt="a forest in the snow">
+                                <img src="../static/images/collage/middle.gif" alt="a lioness">
+                                <img src="../static/images/collage/empty.gif" alt="a forest">
+                                <img src="../static/images/collage/phising.gif" alt="those kind of dog and wolve at the same time">
+                                <img src="../static/images/collage/empty.gif" alt="the sea">
+                                <img src="../static/images/collage/ransomewarecollage.gif" alt="a bear">
+                              </div>                            <br/><br/><br/><br/><br/><br/>
+                            <!--<div class="about-text-info d-flex" >
                                 <div class="d-flex">
                                     <i class="about-text-icon bi-person"></i>
                                 </div>
 
-
                                 <div class="ms-4">
-                                    <h3>a happy moment</h3>
+                                    <h3 >a happy moment</h3>
 
                                     <p class="mb-0">your amazing festival experience with us</p>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
 
@@ -723,11 +724,11 @@ T e m p l a t e M o
 -->
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.sticky.js"></script>
+    <script src="static/js/click-scroll.js"></script>
+    <script src="static/js/custom.js"></script>
 
 </body>
 
