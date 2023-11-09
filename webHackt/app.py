@@ -9,7 +9,11 @@ app = Flask(__name__)
 
 @app.route("/index")
 def hello():
-    return render_template('index.html')
+    return render_template('quiz.html')
+
+@app.route("/trial")
+def trial():
+    return render_template('trial.html')
 
 @app.route("/chatbot")
 def chatbot():
