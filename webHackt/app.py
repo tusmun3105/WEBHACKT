@@ -7,11 +7,29 @@ import os
 import time
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/index")
 def hello():
-    print("121221")
     return render_template('index.html')
 
+@app.route("/chatbot")
+def chatbot():
+    return render_template('chatbot.html')
+
+@app.route("/phishing")
+def phishing():
+    return render_template('Phishing2.html')
+
+@app.route("/ransomware")
+def ransomware():
+    return render_template('ransomware.html')
+
+@app.route("/scam2")
+def scam2():
+    return render_template('scam2.html')
+
+@app.route("/malware")
+def malware():
+    return render_template('malware.html')
 
 os.environ['_BARD_API_KEY'] = 'cwiBJhvayANo2rjmgcCGlwyte8xj-jVAN12vrNuts6SH6S4VRarabVFhnximP_M9P-sBlQ.'
 token='cwiBJhvayANo2rjmgcCGlwyte8xj-jVAN12vrNuts6SH6S4VRarabVFhnximP_M9P-sBlQ.'
