@@ -1,35 +1,49 @@
 const questions = [
     {
-        question: "Why is it important for users to be cautious about the websites they visit and verify website URLs??",
+        question: "Why is it important for users to be cautious about the websites they visit and verify website URLs?",
         type : "text",
-        choices: ["To support cybercriminal activities", "Try to give money", "To prevent fraud", "Paris"],
-        correctAnswer: "To support cybercriminal activities",
+        choices: ["To support cybercriminal activities", "Try to give money", "To prevent fraud"],
+        correctAnswer: "To prevent fraud",
+        message:'To prevent fraud'
     },
     {
         question: "What is the largest mammal in the world?",
         type : "image",
         correctAnswer: "Yes",
         path:'static/images/imagesQues/smallemail.png',
-        correctPath:'static/images/imagesQues/smallemailcorrect.png'
+        correctPath:'static/images/imagesQues/smallemailcorrect.png',
+        message : 'The sender address is \'efacks.com\', is misspelled'
     },
     {
-        question: "Which planet is known as the Red Planet?",
+        question: "What should you do if your computer is infected with ransomware?",
         type : "text",
-        choices: ["Earth", "Mars", "Venus", "Jupiter"],
-        correctAnswer: "Mars",
+        choices: ["Pay the ransom immediately to recover your files.", "Disconnect from the internet and seek professional assistance.", "Ignore it and hope the attacker will release your files."],
+        correctAnswer: "Disconnect from the internet and seek professional assistance.",
+        message:'Disconnect from the internet, isolate the infected device, and seek professional assistance.'
+    },
+
+    {
+        question: "If you fall for a phishing scam, what should you do to limit the damage?",
+        type : "text",
+        choices: [" Delete the phishing email.", "Try to give money", "Unplug the computer.This will get rid of any malware", "Change any compromised passwords."],
+        correctAnswer: "Change any compromised passwords.",
+        message:'Change any compromised passwords.'
     },
     {
-        question: "What is the largest mammal in the world?",
+        question: "Is this a scam?",
+        type : "image",
+        correctAnswer: "Yes",
+        path:'static/images/imagesQues/message.png',
+        correctPath:'static/images/imagesQues/message.png',
+        message:'Never send money or give credit card details, online account details, or copies of important personal documents to anyone you don’t know or trust'
+    },
+    {
+        question: "Is this a scam?",
         type : "image",
         correctAnswer: "No",
-        path:'static/images/imagesQues/smallemail.png',
-        correctPath:'static/images/imagesQues/smallemailcorrect.png'
-    },
-    {
-        question: "Why is it important for users to be cautious about the websites they visit and verify website URLs??",
-        type : "text",
-        choices: ["To support cybercriminal activities", "Try to give money", "To prevent fraud", "Paris"],
-        correctAnswer: "To support cybercriminal activities",
+        path:'static/images/imagesQues/mailNotScam.png',
+        correctPath:'static/images/imagesQues/mailNotScam.png',
+        message:' Rather than asking you to click on a link in the email, the company instructs you to type their web address into your browser to log in'
     }
 
 ];
@@ -60,15 +74,17 @@ $(document).ready(function(){
             value = $("input[name='fav_language']:checked").val();
             if(value == questions[currentQuestionIndex]['correctAnswer'])
             {
-                $("#correctAnswer").text("Correct");
+                $("#correctAnswer").text("Correct" + questions[currentQuestionIndex]['message']);
+                $("#correctAnswer").css("color", "green");
                 $(this).text("Next");
                 currentQuestionIndex++;
                 score++;
             }
             else
             {   
-                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['correctAnswer'];
+                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['message'];
                 $("#correctAnswer").text(text);
+                $("#correctAnswer").css("color", "red");
                 $(this).text("Next");
                 currentQuestionIndex++
             }
@@ -131,14 +147,16 @@ $(document).ready(function(){
             var value = $(this).val();
 
             if (value == questions[currentQuestionIndex]['correctAnswer']) {
-                $("#correctAnswer").text("Correct");
+                $("#correctAnswer").text("Correct. "+ questions[currentQuestionIndex]['message']);
+                $("#correctAnswer").css("color", "green");
                 imageSrc =questions[currentQuestionIndex]['correctPath']
                 $(".image-question img").attr("src", imageSrc); 
                 currentQuestionIndex++;
                 score++;
             } else {
-                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['correctAnswer']
+                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['message'];
                 $("#correctAnswer").text(text);
+                $("#correctAnswer").css("color", "red");
                 imageSrc =questions[currentQuestionIndex]['correctPath']
                 $(".image-question img").attr("src", imageSrc); 
                 currentQuestionIndex++
