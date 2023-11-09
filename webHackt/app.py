@@ -8,5 +8,9 @@ app = Flask(__name__)
 def hello():
     return render_template('quiz.html')
 
+@app.route("/trial")
+def trial():
+    return render_template('trial.html')
+
 if __name__ == '__main__':
    app.run(debug = True)
