@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     print("121221")
-    return render_template('chatbot.html')
+    return render_template('index.html')
 
 
 os.environ['_BARD_API_KEY'] = 'cwiBJhvayANo2rjmgcCGlwyte8xj-jVAN12vrNuts6SH6S4VRarabVFhnximP_M9P-sBlQ.'
