@@ -121,7 +121,7 @@ https://templatemo.com/tm-583-festava-live
 
                             <div class="question-container">
 
-                                <div class="text-question">
+                                <div class="text-question" >
                                     <div class="answer">
                                         <input type="radio" id="ans1" name="fav_language" value="wrong answer">
                                         <label for="ans1">To support cybercriminal activities</label>
@@ -147,6 +147,14 @@ https://templatemo.com/tm-583-festava-live
 
                                 </div> <!-- text-question-->
 
+                                <div class="image-question"  style="display:none;" >
+
+                                    <img src="static/images/imagesQues/smallemail.png" alt="" style="width:100%">
+    
+                                </div>
+
+
+
                             
                             </div><!-- question-container-->
 
@@ -157,7 +165,12 @@ https://templatemo.com/tm-583-festava-live
                             </div>
 
                             <div class="col-lg-3 col-md-10 col-6 mx-auto">
-                                <button type="submit" class="form-control submit-button-red">Submit</button>
+                                <button type="submit" class="form-control submit-button-red"  id="submitButton">Submit</button>
+
+                                <div class="row image-question-buttons"  style="display:none;">
+                                    <button type="button" class="form-control submit-button-red col imageButton" id="Yes" value="Yes" >Yes</button>
+                                    <button type="button" class="form-control submit-button-red col imageButton" id="No" value="No">No</button>
+                                </div>
                             </div>
                             
 

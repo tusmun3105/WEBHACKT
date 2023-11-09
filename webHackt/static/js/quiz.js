@@ -4,48 +4,55 @@ const questions = [
         type : "text",
         choices: ["To support cybercriminal activities", "Try to give money", "To prevent fraud", "Paris"],
         correctAnswer: "To support cybercriminal activities",
-        path:" "
+    },
+    {
+        question: "What is the largest mammal in the world?",
+        type : "image",
+        correctAnswer: "Yes",
+        path:'static/images/imagesQues/smallemail.png',
+        correctPath:'static/images/imagesQues/smallemailcorrect.png'
     },
     {
         question: "Which planet is known as the Red Planet?",
         type : "text",
         choices: ["Earth", "Mars", "Venus", "Jupiter"],
         correctAnswer: "Mars",
-        path:" "
     },
     {
         question: "What is the largest mammal in the world?",
         type : "image",
-        choices: ["Elephant", "Giraffe", "Blue Whale", "Lion"],
-        correctAnswer: "Yes",
-        path:"AyushNursimooloo\\Pictures\\Saved Pictures\\default.jpg"
-    },
-    {
-        question: "What is the largest mammal in the world?",
-        type : "image",
-        choices: ["Elephant", "Giraffe", "Blue Whale", "Lion"],
         correctAnswer: "No",
-        path:"AyushNursimooloo\\Pictures\\Saved Pictures\\default.jpg"
+        path:'static/images/imagesQues/smallemail.png',
+        correctPath:'static/images/imagesQues/smallemailcorrect.png'
+    },
+    {
+        question: "Why is it important for users to be cautious about the websites they visit and verify website URLs??",
+        type : "text",
+        choices: ["To support cybercriminal activities", "Try to give money", "To prevent fraud", "Paris"],
+        correctAnswer: "To support cybercriminal activities",
     }
 
 ];
 
-function showQuestion() {
-    const currentQuestion = questions[currentQuestionIndex];
-    questionText.textContent = currentQuestion.question;
-    let quizHeader = "<h1 id=\"questionText\">Why is it important for users to be cautious about the websites they visit and verify website URLs?</h1>";
+// function showQuestion() {
+//     const currentQuestion = questions[currentQuestionIndex];
+//     questionText.textContent = currentQuestion.question;
+//     let quizHeader = "<h1 id=\"questionText\">Why is it important for users to be cautious about the websites they visit and verify website URLs?</h1>";
    
-}
+// }
+
+let currentQuestionIndex = 0;
+let score = 0 ;
 
 $(document).ready(function(){
 
-    let currentQuestionIndex = 0;
-      $(".form-control").click(function(){
+    $("#submitButton").click(function(){
         SubmitText = "Submit";
         NextText = "Next";
         TextType = "text";
         ImageType = "image";
         BtnText=$(this).text();
+
         if(BtnText == SubmitText){
             value = $("input[name='fav_language']:checked").val();
             if(value == questions[currentQuestionIndex]['correctAnswer'])
@@ -53,10 +60,11 @@ $(document).ready(function(){
                 $("#correctAnswer").text("Correct");
                 $(this).text("Next");
                 currentQuestionIndex++;
+                score++;
             }
             else
             {   
-                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['correctAnswer']
+                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['correctAnswer'];
                 $("#correctAnswer").text(text);
                 $(this).text("Next");
                 currentQuestionIndex++
@@ -64,11 +72,16 @@ $(document).ready(function(){
         }
         else if (BtnText == NextText)
         {
-            $("#questionText").text(questions[currentQuestionIndex]['question'])
-            $(this).text("Submit");
+            $("#questionText").text(questions[currentQuestionIndex]['question']);
+            //$(this).text("Submit");
             $("#correctAnswer").text("");
-            if(questions[currentQuestionIndex]['type'] == TextType)
-            {
+            if(questions[currentQuestionIndex]['type'] == TextType) {
+                $(this).text("Submit");
+                if ($('.image-question').is(':visible')) {
+                    $('.image-question').hide();
+                }
+                
+                $('.text-question').show();
                 var length = questions[currentQuestionIndex]['choices'].length;
                 text = ``;
                 for (let i = 0; i < length; i++)
@@ -81,30 +94,47 @@ $(document).ready(function(){
                 $(".text-question").html(text);     
             }
             else if(questions[currentQuestionIndex]['type'] == ImageType)
-            {
-
+            {   
+                if ($('.text-question').is(':visible')) {
+                    $('.text-question').hide();
+                }
+                
+                $('.image-question').show();
+                //$('.image-question').hide();
+                imageSrc =questions[currentQuestionIndex]['path']
+                $(".image-question img").attr("src", imageSrc); 
+                $(".image-question img").show(); 
+                $(this).hide();
+                $('.image-question-buttons').show();
             }
     }
     
-        //let newHeader =questions[1]['question'];
-        //$("#questionText").text(newHeader);
     });
+//let newHeader =questions[1]['question'];
+//$("#questionText").text(newHeader);
 
+        $(".imageButton").click(function(){
+            var value = $(this).val();
 
+            if (value == questions[currentQuestionIndex]['correctAnswer']) {
+                $("#correctAnswer").text("Correct");
+                imageSrc =questions[currentQuestionIndex]['correctPath']
+                $(".image-question img").attr("src", imageSrc); 
+                currentQuestionIndex++;
+                score++;
+            } else {
+                text = "Wrong!! the correct answer is : " + questions[currentQuestionIndex]['correctAnswer']
+                $("#correctAnswer").text(text);
+                imageSrc =questions[currentQuestionIndex]['correctPath']
+                $(".image-question img").attr("src", imageSrc); 
+                currentQuestionIndex++
+            }
 
+            $('.image-question-buttons').hide();
+            $("#submitButton").show();
+            $("#submitButton").text("Next");
 
+        });
+       
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
   });
