@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Online Fraud Awareness</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="static/css/templatemo-festava-live.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+<style> .gallery {
+    --s: 150px; /* control the size */
+    
+    display: grid;
+    gap: 10px; /* control the gap */
+    grid: auto-flow var(--s)/repeat(3,var(--s));
+    place-items: center;
+    margin: calc(var(--s)/4);
+  }
+  .gallery > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .gallery > img:nth-child(odd) {
+    border-radius: 50%;
+    width: 141%;
+  }
+  .gallery > img:nth-child(even) {
+    --_r: calc(var(--s)/1.414) at;
+    --_g: calc(var(--s)/-2),#000 99%,#0000;
+    --_m:
+      radial-gradient(var(--_r) left 50% bottom var(--_g)),
+      radial-gradient(var(--_r) left 50% top    var(--_g)),
+      radial-gradient(var(--_r) top  50% right  var(--_g)),
+      radial-gradient(var(--_r) top  50% left   var(--_g)),
+      linear-gradient(#000 0 0);
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+  }
+  
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    place-content: center;
+    
+  }</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <i class="fa fa-shield" aria-hidden="true" style="font-size:60px; margin-right:20px; color:white;"></i>
+            <a class="navbar-brand" href="index.html">
+                Online Fraud Awareness
+            </a>
+
+            <!--<a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>-->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3">Chat Bot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3" >Take Quiz</a>
+                    </li>
+                </ul>
+
+               <!-- <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Take Quiz</a>-->
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        
+        <section class="about-section section-padding" id="section_2" style="background-image: url('../static/images/collage/black.jpg');">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <BR></BR>
+                            <BR></BR>
+                            <h2 class="text-white mb-4">What is Ransomeware?</h2>
+
+                            <p class="text-white" style="text-align:justify;">Malware refers to any software designed to have a malicious purpose once deployed to a computer or network. Malware infection typically occurs without a user's knowledge, often because it camouflages itself as a different file type such as an image or PDF file.</p>
+
+                            <p class="text-white" style="text-align:justify;">This type of software can affect both desktop and mobile devices. It can serve various purposes, from stealing information to spying on keystrokes and even using a computer's hardware to mine cryptocurrency.</p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <BR></BR><BR></BR>
+                            <img src="../static/images/cardImages/ransom.png" class="about-image img-fluid" style="width:750px; height:325px; display:flex;">
+
+                            
+                        </div> 
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">How Ransomware Works?</h2>
+
+                            <p class="text-white" style="text-align:justify;">Ransomware is a type of malicious software that threatens to release or block
+                                access to data or a computer system by encryption until the victim pays a
+                                ransom fee in cryptocurrency tokens or fiat money. Usually, there is a fixed
+                                deadline for payment of the ransom. If the deadline is not met, the data may
+                                be released or the ransom fee may be increased. Ransomware has been
+                                used as far back as 1989 when the AIDs virus was used to extort money from
+                                victims, who mailed the money via Panama to the cyber criminals.
+                                In 2005, the first cases of cyber extortion through blackmail were reported in
+                                Russia. Over the years, Ransomware use has spread widely among hackers,
+                                especially since the adoption of cryptocurrency. In 2011, there was a marked
+                                increase in the rate of ransomware attacks. Sometime in the year 2016, more
+                                attacks were noticed and antivirus software took on more designs to focus
+                                viral scanners on ransomware. Since then, ransomware attacks have evolved
+                                in different ways to trick victims into paying for access to their own data.</p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">How Ransomware Works</h2>
+
+                            <p class="text-white" style="text-align:justify;">Ransomware is installed by finding loopholes in your data security system and
+                                exploiting them. One method Ransomware employs is the use of phishing:
+                                basically sending scam emails that convince victims to release administrative
+                                control or access to sensitive data. Once access is given, some or all of the
+                                victims files are encrypted and the victim loses data access. The files can only
+                                be decrypted with a mathematical key known to the attacker. The victim
+                                receives a message demanding for an untraceable payment to enable the
+                                attacker to decrypt the file and restore access.
+                                Another way Ransomware works is by exploiting the remote desktop protocol
+                                (RDP). An attacker can use RDP to successfully access and authenticate
+                                enterprise data after guessing and entering employee passwords. The data is
+                                accessed remotely on a computer within the enterprise network.
+                                Subsequently, the malware is downloaded and executed on the machine
+                                under the attacker's control. Access is gained and original files are replaced
+                                with encrypted versions. In some cases, original files are deleted so that the
+                                only available files are encrypted. This leaves the victims with no choice than
+                                to pay the ransom. Other ransomware attacks may be direct or involve other
+                                social engineering techniques like sending a fake law violation  notification
+                                from a government agency and demanding a fee. The bottom line is that
+                                
+                                Ransomware attacks generally involve installing malicious software,
+                                encrypting files and collecting ransoms.</p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <img src="../static/images/cardImages/ransom2.png" class="about-image img-fluid" style="width:750px; height:325px;">
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">The Dangers of Ransomware?</h2>
+
+                            <p class="text-white" style="text-align:justify;">The obvious consequence of falling victim to ransom attacks is monetary loss:
+                                however, there are many more dangers that could result from having
+                                ransomware on your system. The worst result of Ransomware is the data loss
+                                that occurs: hackers can encrypt multiple files, rendering them useless. This
+                                can negatively affect your business, especially if sensitive customer data or
+                                organization information. If your customers find out that your database has
+                                been compromised, they will lose trust in your business and switch to your
+                                competitors. Your reputation as an organization may be destroyed, and in
+                                some countries you may face legal implications.
+                                The costs of a Ransomware attack are beyond financial, even though in most
+                                occasions the ransoms involved are expensive and paying them may cause
+                                an organization to shut down. Personal and organization devices may also
+                                malfunction after a Ransomware attack, contributing to increased IT costs for
+                                your organization. These devices can also be hacked to obtain credit card
+                                data and login information for more fraudulent activities. Once a Ransomware
+                                attack occurs, your data system becomes more vulnerable to more attacks. To
+                                ensure reduced risk of repeat attacks, your organization has to spend more in
+                                strengthening cybersecurity defenses. Devices may be replaced and
+                                employees may be made to undergo cybersecurity training, increasing costs
+                                and reducing work productivity in your organization.
+                                </p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        
+
+
+        <section class="pricing-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Methods of infection</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Malvertising</h3>
+
+                                    <p style="text-align:center;"> Malicious advertising, or malvertising, involves placing malicious code in online advertisements. When users click on these ads or visit compromised websites, the ransomware can be silently delivered to their systems.</p>
+                                </div>
+                               
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Exploiting Vulnerabilities</h3>
+                                    <br/>
+                                    <p style="text-align:center;">Ransomware creators may exploit software vulnerabilities to infect systems. They target unpatched or outdated software, taking advantage of security weaknesses to deliver and execute the ransomware on the victim's device.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Social Engineering</h3>
+                                    <br/>
+                                    <p style="text-align:center;">Attackers may use social engineering techniques to manipulate individuals into willingly downloading and executing ransomware. This could involve disguising malicious files as legitimate software or enticing users to click on infected links.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Watering Hole Attacks:</h3>
+
+                                    <p style="text-align:center;">In a watering hole attack, cybercriminals compromise websites that are frequently visited by their target victims. When users visit these legitimate sites, they unknowingly download ransomware.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+        <section class="youtube-video">
+            <div class="container text-center"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fc2tbHWZu4I?si=7hj6mAJPJYTVw4LJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        
+
+    </main>    
+    
+    <!--
+
+T e m p l a t e M o
+
+-->
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.sticky.js"></script>
+    <script src="static/js/click-scroll.js"></script>
+    <script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

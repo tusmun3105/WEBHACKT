@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Online Fraud Awareness</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+ 
+    <link href="static/css/templatemo-festava-live.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+<style> .gallery {
+    --s: 150px; /* control the size */
+    
+    display: grid;
+    gap: 10px; /* control the gap */
+    grid: auto-flow var(--s)/repeat(3,var(--s));
+    place-items: center;
+    margin: calc(var(--s)/4);
+  }
+  .gallery > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .gallery > img:nth-child(odd) {
+    border-radius: 50%;
+    width: 141%;
+  }
+  .gallery > img:nth-child(even) {
+    --_r: calc(var(--s)/1.414) at;
+    --_g: calc(var(--s)/-2),#000 99%,#0000;
+    --_m:
+      radial-gradient(var(--_r) left 50% bottom var(--_g)),
+      radial-gradient(var(--_r) left 50% top    var(--_g)),
+      radial-gradient(var(--_r) top  50% right  var(--_g)),
+      radial-gradient(var(--_r) top  50% left   var(--_g)),
+      linear-gradient(#000 0 0);
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+  }
+  
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    place-content: center;
+    
+  }</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <i class="fa fa-shield" aria-hidden="true" style="font-size:60px; margin-right:20px; color:white;"></i>
+            <a class="navbar-brand" href="index.html">
+                Online Fraud Awareness
+            </a>
+
+            <!--<a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>-->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3">Chat Bot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3" >Take Quiz</a>
+                    </li>
+                </ul>
+
+               <!-- <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Take Quiz</a>-->
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        
+        <section class="about-section section-padding" id="section_2" style="background-image: url('../static/images/collage/black.jpg');">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <BR></BR>
+                            <BR></BR>
+                            <h2 class="text-white mb-4">What is Phishing?</h2>
+
+                            <p class="text-white" style="text-align:justify;">Phishing can be described as a type of cybercrime in which the victims are contacted by email, telephone, or message by an individual or group of persons posing to be a legitimate institution.
+                                The aim is to lure the victims into providing sensitive data like personal information, bank details, credit card details, and passwords. The data is then used to identify significant targets and defraud these victims. 
+                                Phishing has been occurring for years: the first phishing scams happened in the 90s with people impersonating AOL admins. These people collected log-in credentials from their victims so that they could access the internet for free.
+                                In May 2000, another phishing scam called the Love Bug started in the Philippines. You would receive a message in your mailbox titled "ILOVEYOU." Then, the body of the mail would instruct you to tap on an attachment, which would then release a virus on your system. Since then, phishing has evolved in complexity and usage over the years.
+                                
+                                </p>
+
+                            
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <BR></BR><BR></BR>
+                            <img src="../static/images/cardImages/phishing.webp" class="about-image img-fluid" style="width:750px; height:325px; display:flex;">
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">How Phishing Works</h2>
+
+                            <p class="text-white" style="text-align:justify;">How Phishing Works
+                                It&#39;s Monday morning, you are sorting through your emails and clearing your
+                                spam folder. Out of curiosity, you open an email, and the content is shocking.
+                                Someone claims to be a representative of your bank.
+                                Your account will soon be deactivated, and you are required to click on a link
+                                or provide sensitive bank information so that you do not lose your bank
+                                account. This is how phishing happens: like a random message written for you
+                                to give out your data.
+                                Phishing in general uses manipulation as its main tool. The messages often
+                                sent by text messages, emails, or even social media messages are written
+                                with the intent to cause fear and a sense of urgency. Targets are identified on
+                                public sources of information like social media.The intent of phishing may be to install malware, redirect victims to a
+                                fraudulent website, obtain passwords and bank details, and defraud targets.
+                                Phishers often employ different tricks to defraud their victims, and they try to
+                                appear as legitimate as possible. They may use company logos, mimic official
+                                emails, and hide URLs just to defraud their victims.</p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">How to Prevent Phishing Attacks 
+                                </h2>
+
+                            <p class="text-white" style="text-align:justify;">Preventing phishing attacks involves a two-way mechanism: identifying phishing attacks and taking active steps to prevent them. Knowing how to identify phishing attacks is the first step in preventing them. The key point is to be careful: look out for key signs of phishing.
+                                Signs like first-time email senders, urgent requests for personal information, generic greetings, spelling errors in messages, unsolicited attachments, strange links in messages, and strange domain names are clear markers that something is wrong.
+                                You should ignore any emails, phone calls, or messages asking for your personal information like bank account details, card details, and company data if you handle sensitive data at your workplace.
+                                Preventing phishing involves taking active steps to protect your data from falling into the hands of scammers. The first thing to do is avoid clicking any suspicious links sent in your emails and messages. Then, you should install anti-phishing browsers on your web browsers. In addition, install anti-virus software on your computer.
+                                All your browsers and software should be kept up to date to prevent breaches in data that expose your data to phishers. Use protective firewalls on your computer: a desktop firewall and a network firewall to protect your system from hackers. You should also remember not to use sites that are not secure: as a rule, stick to HTTPS, not HTTP sites.
+                                At the end of the day, even after employing these tactics, no one is completely safe from phishers. However, you can reduce your risk of becoming a victim.</p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+<!--
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <img src="images/malware1.jpg" class="about-image img-fluid" style="width:750px; height:325px;">
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">The Dangers of Ransomware?</h2>
+
+                            <p class="text-white" style="text-align:justify;">The obvious consequence of falling victim to ransom attacks is monetary loss:
+                                however, there are many more dangers that could result from having
+                                ransomware on your system. The worst result of Ransomware is the data loss
+                                that occurs: hackers can encrypt multiple files, rendering them useless. This
+                                can negatively affect your business, especially if sensitive customer data or
+                                organization information. If your customers find out that your database has
+                                been compromised, they will lose trust in your business and switch to your
+                                competitors. Your reputation as an organization may be destroyed, and in
+                                some countries you may face legal implications.
+                                The costs of a Ransomware attack are beyond financial, even though in most
+                                occasions the ransoms involved are expensive and paying them may cause
+                                an organization to shut down. Personal and organization devices may also
+                                malfunction after a Ransomware attack, contributing to increased IT costs for
+                                your organization. These devices can also be hacked to obtain credit card
+                                data and login information for more fraudulent activities. Once a Ransomware
+                                attack occurs, your data system becomes more vulnerable to more attacks. To
+                                ensure reduced risk of repeat attacks, your organization has to spend more in
+                                strengthening cybersecurity defenses. Devices may be replaced and
+                                employees may be made to undergo cybersecurity training, increasing costs
+                                and reducing work productivity in your organization.
+                                </p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>-->
+
+
+        
+
+
+        <section class="pricing-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Types of Phishing</h2>
+                    </div>
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4" style="font-size: 3.0vh; ;">There are different types of phishing: I have compiled a list of the most
+                            common types of phishing scams and how they occur. The types of phishing
+                            are:</h2>
+                    </div>
+                
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Email phishing</h3>
+
+                                    <p style="text-align:center;"> This is the most common type of phishing in which the victims receive emails informing them that their personal accounts have been compromised and immediate response is required.
+                                         Email phishing aims to create a sense of urgency and make the 
+                                        victim click on a malicious link that leads to a fake login page. Sensitive personal information is delivered straight to the scammers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">HTTPS phishing</h3>
+                                    <br/>
+                                    <p style="text-align:center;"> In HTTPS phishing, hackers may gain access to secure conversations by
+                                         using expired SSL certificates or strip away the encryption from secure websites by downgrading HTTPS sites to HTTP.
+                                          Fake websites similar to organizational websites are then created, to be linked in emails. 
+                                        The phishers then send fake emails using organization IDs to employees, infiltrating organizations and stealing valuable data.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Spear phishing</h3>
+                                    <br/>
+                                    <p style="text-align:center;"> Spear phishing is used in targeting specific individuals, groups,
+                                         and organizations. Spear phishing often involves research on the target and publicly available sources of information.
+                                          The goal of spear phishing is to gain access to an individual account or impersonate high-ranking staff as well as staff in 
+                                          possession of confidential information.
+                                         An email including the target's name, rank, and an attachment is usually sent to carry out spear phishing.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Whaling</h3>
+
+                                    <p style="text-align:center;"> Whaling is a type of spear phishing that is usually directed at top-level executives.
+                                         The scammers pretend to be legitimate sources, and they encourage victims to share sensitive information or wire large amounts 
+                                         of money. Whaling often occurs as an email from a trusted source like a company contact, partner, vendor, or customer account.
+                                          The email often includes personal data or references gleaned from the internet to appear trustworthy. The email may include links to a fake website that collects information or installs malware. Alternatively, the email could include requests for sensitive data like payroll, tax returns, bank account numbers, or for a money transfer via wire to a specific account.
+                                         Whaling is done to steal data or money from top-level executives.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+        <section class="youtube-video">
+            <div class="container text-center"> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y7zNlEMDmI4?si=uKEvfUg7Wfocd3ul" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             </div>
+        </section>
+
+        
+
+    </main>    
+    
+    <!--
+
+T e m p l a t e M o
+
+-->
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.sticky.js"></script>
+    <script src="static/js/click-scroll.js"></script>
+    <script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Online Fraud Awareness</title>
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="static/css/templatemo-festava-live.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--
+
+TemplateMo 583 Festava Live
+
+https://templatemo.com/tm-583-festava-live
+
+-->
+<style> .gallery {
+    --s: 150px; /* control the size */
+    
+    display: grid;
+    gap: 10px; /* control the gap */
+    grid: auto-flow var(--s)/repeat(3,var(--s));
+    place-items: center;
+    margin: calc(var(--s)/4);
+  }
+  .gallery > img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  .gallery > img:nth-child(odd) {
+    border-radius: 50%;
+    width: 141%;
+  }
+  .gallery > img:nth-child(even) {
+    --_r: calc(var(--s)/1.414) at;
+    --_g: calc(var(--s)/-2),#000 99%,#0000;
+    --_m:
+      radial-gradient(var(--_r) left 50% bottom var(--_g)),
+      radial-gradient(var(--_r) left 50% top    var(--_g)),
+      radial-gradient(var(--_r) top  50% right  var(--_g)),
+      radial-gradient(var(--_r) top  50% left   var(--_g)),
+      linear-gradient(#000 0 0);
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: destination-out;
+            mask-composite: exclude;
+  }
+  
+  
+  body {
+    margin: 0;
+    min-height: 100vh;
+    place-content: center;
+    
+  }</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <i class="fa fa-shield" aria-hidden="true" style="font-size:60px; margin-right:20px; color:white;"></i>
+            <a class="navbar-brand" href="index.html">
+                Online Fraud Awareness
+            </a>
+
+            <!--<a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>-->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_1">Home</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3">Chat Bot</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#section_3" >Take Quiz</a>
+                    </li>
+                </ul>
+
+               <!-- <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Take Quiz</a>-->
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        
+        <section class="about-section section-padding" id="section_2" style="background-image: url('../static/images/collage/black.jpg');">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <BR></BR>
+                            <BR></BR>
+                            <h2 class="text-white mb-4">What is Online Scamming?</h2>
+
+                            <p class="text-white" style="text-align:justify;">An online scam is a dishonest scheme carried out over the internet. The goal is to defraud potential victims and generate financial gain for the perpetrator. Most scammers are after your bank account details, though some might also install malware on your computer.</p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <BR></BR><BR></BR>
+                            <img src="../static/images/cardImages/scam.png" class="about-image img-fluid" style="width:700px; height:250px; display:flex;">
+
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">How do I know if I am being scammed online?</h2>
+                            <BR><BR><BR>
+                            <ul>
+                                <li class="text-white" style="text-align:justify;">Emails or messages from unfamiliar numbers of email addresses.</li><BR>
+                                <li class="text-white" style="text-align:justify;">Urgent requests.</li><BR>
+                                <li class="text-white" style="text-align:justify;">Wire transfer requests.</li><BR>
+                                <li class="text-white" style="text-align:justify;">Asking you for personal information.</li><BR>
+                                <li class="text-white" style="text-align:justify;">Sweepstake or prize giveaways.</li><BR>
+                            </ul>
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">Protecting yourself from online scams</h2>
+                            <BR><BR><BR><BR>
+                            <ul>
+                                <li class="text-white" style="text-align:justify;">Make sure any websites you use are secure. Reliable websites starts with HTTPS, not HTTP.</li>
+                                <li class="text-white" style="text-align:justify;">Once the page has loaded, make sure the website address that you have entered hasn’t changed to a slightly different spelling.</li>
+                                <li class="text-white" style="text-align:justify;">Use safe and secure WiFi connections.</li>
+                                <li class="text-white" style="text-align:justify;">Keep virus protection software up-to-date.</li>
+                                <li class="text-white" style="text-align:justify;">Make sure all accounts have a strong password. Don’t use the same password for multiple accounts and change them regularly.</li>
+                            </ul>
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+        <section class="pricing-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Types of Online Scams</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Tech Support Scams</h3>
+<br/><br/>
+                                    <p style="text-align:center;">Tech support scams typically involve unsolicited calls or pop-up messages claiming to be from legitimate tech support services. Scammers convince individuals that their computers have issues and request remote access or payment for unnecessary services, preying on the victims' lack of technical knowledge for financial gain.</p>
+                                </div>
+                               
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Romance Scams</h3>
+                                    <br/>
+                                    <p style="text-align:center;">Romance scams involve building fake online relationships to exploit individuals emotionally and financially. Scammers create compelling personas, gain their victims' trust, and then request money for various reasons, such as medical emergencies or travel expenses, leaving victims both heartbroken and financially devastated.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Lottery or Prize Scams</h3>
+                                    <br/>
+                                    <p style="text-align:center;">Victims receive notifications claiming they have won a lottery, prize, or sweepstakes, but in order to claim the winnings, they are required to pay fees or provide personal information. In reality, there is no legitimate prize, and the scammers aim to exploit the victims financially.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Charity Scams</h3>
+<br/><br/>
+                                    <p style="text-align:center;">Scammers take advantage of people's generosity by posing as charitable organizations, especially during times of natural disasters or crises. They request donations, but the funds end up in the hands of fraudsters rather than supporting legitimate causes.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+        <section class="contact-section section-padding" id="section_6">
+            <div class="container">
+                <div class="row">
+
+                    <div class="container text-center"> 
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/qRWpvcjpQNw?si=-p_TZPfrQazxGmp5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <div class="about-text-wrap">
+                            <img src="../static/images/cardImages/scam1.png" class="about-image img-fluid" style="width:750px; height:325px; display:flex;">
+
+                             
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                        <div class="services-info">
+                            <h2 class="text-white mb-4">Summary</h2>
+
+                            <p class="text-white" style="text-align:justify;">Online scamming involves deceptive practices carried out over the internet to exploit individuals, businesses, or organizations for financial gain or other malicious purposes. Scammers employ various tactics, including phishing, identity theft, online shopping fraud, tech support scams, lottery or prize hoaxes, romance scams, and investment fraud. These schemes often rely on the manipulation of trust, ignorance, or vulnerabilities of targets. To protect against online scams, individuals need to exercise caution when sharing personal information, verify the legitimacy of online entities, use secure passwords, and stay informed about emerging scam tactics. While law enforcement and cybersecurity efforts aim to combat online scams, public awareness and education are crucial in preventing individuals from falling victim to these deceptive practices.
+                                </p>
+
+                            <!-- <h6 class="text-white mt-4">Once in Lifetime Experience</h6> -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        
+
+
+        <!--<section class="pricing-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h2 class="text-center mb-4">Methods of infection</h2>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Network</h3>
+
+                                    <p style="text-align:center;">Type of malware that can spread to other devices connected on the same network in addition to its primary objective. Once installed via one of the other methods above, this malware will look for other devices to infect.</p>
+                                </div>
+                               
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">USB</h3>
+                                    <br/>
+                                    <p style="text-align:center;">Cyber-criminals will often drop USB keys containing files that use enticing names to convince whoever finds it to plug the USB and open the file and, in turn, deliver the malware to the computer.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Websites</h3>
+                                    <br/>
+                                    <p style="text-align:center;">Whether via social networking sites or a compromised legitimate site, websites can be used to deliver malware to an unsuspecting visitor.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12"><br/>
+                        <div class="pricing-thumb">
+                            <div class="d-flex">
+                                <div>
+                                    <h3 style="text-align:center;">Infected Files</h3>
+
+                                    <p style="text-align:center;">Legitimate files and software may be infected with a virus. Once opened, they will operate as expected and install malware on the device without the user's knowledge.</p>
+                                </div>
+                               
+                            </div>
+
+
+                            
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </section>
+        <section class="youtube-video">
+            <div class="container text-center"> 
+            <iframe lass="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/NMYbkzjI5EY?si=yOxDGvN0f8wRzQcq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>-->
+
+        
+
+    </main>    
+    
+    <!--
+
+T e m p l a t e M o
+
+-->
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/jquery.sticky.js"></script>
+    <script src="static/js/click-scroll.js"></script>
+    <script src="static/js/custom.js"></script>
+
+</body>
+
+</html>

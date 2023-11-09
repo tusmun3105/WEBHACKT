@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Awareness Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    #output {
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cybersecurity Awareness Game</h1>
+  <p>Learn about phishing, ransomware, viruses, and online scams!</p>
+
+  <div id="output"></div>
+
+  <script>
+    let score = 0;
+
+    function startGame() {
+      alert("Welcome to the Cybersecurity Awareness Game!");
+      alert("Your mission is to protect your computer from cyber threats. Be careful!");
+      playRound();
+    }
+
+    function playRound() {
+      const options = ["phishing", "ransomware", "virus", "online scam"];
+      const randomIndex = Math.floor(Math.random() * options.length);
+      const threat = options[randomIndex];
+
+      const userInput = prompt(`A ${threat} is trying to attack your computer! What will you do? (Type 'protect' to protect, 'ignore' to ignore)`);
+
+      if (userInput.toLowerCase() === 'protect') {
+        alert("Good job! You protected your computer!");
+        score++;
+      } else {
+        alert("Uh-oh! Your computer got attacked. Be careful next time.");
+      }
+
+      if (confirm("Do you want to play another round?")) {
+        playRound();
+      } else {
+        endGame();
+      }
+    }
+
+    function endGame() {
+      document.getElementById('output').innerHTML = `<h2>Game Over</h2><p>Your score: ${score}</p>`;
+      alert("Thanks for playing! Stay safe online!");
+    }
+
+    startGame();
+  </script>
+
+</body>
+</html>
+This simple game randomly generates a cyber threat (phishing, ransomware, virus, or online scam) and prompts the user to either "protect" or "ignore" it. The score increases if the user chooses to protect. The game continues until the user decides to stop. Feel free to customize and enhance it further!
+
+
+
+
+User
+give me another one
+ChatGPT
+Sure thing! How about a multiple-choice quiz this time? Let's create a quiz that educates kids about cybersecurity threats. We'll use HTML for the structure and JavaScript for the functionality.
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Quiz</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+    #quiz-container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cybersecurity Quiz</h1>
+  <div id="quiz-container">
+    <p id="question"></p>
+    <form id="quiz-form">
+      <label>
+        <input type="radio" name="answer" value="phishing"> Phishing
+      </label>
+      <label>
+        <input type="radio" name="answer" value="ransomware"> Ransomware
+      </label>
+      <label>
+        <input type="radio" name="answer" value="virus"> Virus
+      </label>
+      <label>
+        <input type="radio" name="answer" value="online scam"> Online Scam
+      </label>
+      <br>
+      <button type="button" onclick="checkAnswer()">Submit Answer</button>
+    </form>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What is a type of cyber attack that tricks people into revealing sensitive information?",
+        correctAnswer: "phishing"
+      },
+      {
+        question: "Which cyber attack encrypts your files and demands payment for their release?",
+        correctAnswer: "ransomware"
+      },
+      {
+        question: "What is a program that can replicate and spread to other computers?",
+        correctAnswer: "virus"
+      },
+      {
+        question: "Which online threat involves deceptive schemes to trick people for financial gain?",
+        correctAnswer: "online scam"
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function displayQuestion() {
+      const questionElement = document.getElementById('question');
+      const currentQ = questions[currentQuestion];
+      questionElement.textContent = currentQ.question;
+    }
+
+    function checkAnswer() {
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+      if (!selectedAnswer) {
+        alert("Please select an answer!");
+        return;
+      }
+
+      const userAnswer = selectedAnswer.value;
+      const currentQ = questions[currentQuestion];
+
+      if (userAnswer === currentQ.correctAnswer) {
+        score++;
+      }
+
+      currentQuestion++;
+
+      if (currentQuestion < questions.length) {
+        displayQuestion();
+      } else {
+        endQuiz();
+      }
+    }
+
+    function endQuiz() {
+      const feedbackElement = document.getElementById('feedback');
+      feedbackElement.innerHTML = `<p>Quiz complete!</p><p>Your score: ${score} out of ${questions.length}</p>`;
+    }
+
+    displayQuestion();
+  </script>
+
+</body>
+</html>
+This quiz presents multiple-choice questions about various cybersecurity threats. It checks the user's selected answer and provides feedback. Feel free to add more questions and customize it as needed!
+
+
+
+
+
