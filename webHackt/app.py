@@ -7,9 +7,9 @@ import os
 import time
 app = Flask(__name__)
 
-@app.route("/index")
+@app.route("/")
 def hello():
-    return render_template('quiz.html')
+    return render_template('index.html')
 
 @app.route("/trial")
 def trial():
@@ -34,6 +34,10 @@ def scam2():
 @app.route("/malware")
 def malware():
     return render_template('malware.html')
+
+@app.route("/quiz")
+def quiz():
+    return render_template('trial.html')
 
 os.environ['_BARD_API_KEY'] = 'cwiBJhvayANo2rjmgcCGlwyte8xj-jVAN12vrNuts6SH6S4VRarabVFhnximP_M9P-sBlQ.'
 token='cwiBJhvayANo2rjmgcCGlwyte8xj-jVAN12vrNuts6SH6S4VRarabVFhnximP_M9P-sBlQ.'
