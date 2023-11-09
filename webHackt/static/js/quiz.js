@@ -114,7 +114,8 @@ $(document).ready(function(){
             text = `out of ` + numQuestion;
             $('.scoreScreen').show();
             $('#score').text(score);
-            $(this). attr('disabled', true);
+            // $(this). attr('disabled', true);
+            $('.question-card').hide()
         }
     }
     
