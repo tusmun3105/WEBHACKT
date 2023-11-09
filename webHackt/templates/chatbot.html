@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Our chatbot</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: url('../static/images/chatbg.gif');
+	background-size: cover;
+	background-position: center	center;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	min-height: 100vh;
+	font-family: 'Lato', sans-serif;
+	margin: 0 0 50px;
+	overflow: hidden;
+}
+
+h2 {
+  	text-shadow: 1px 1px 2px rgba(0,0,0,1);
+	color: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.chat-container {
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 25px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.7);
+	overflow: hidden;
+	padding: 15px;
+	position: relative;
+	width: 320px;
+	max-width: 100%;
+}
+
+.chat {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.message {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 50px;
+	box-shadow: 0px 15px 5px 0px rgba(0,0,0,0.5);
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.message.left {
+	padding: 15px 20px 15px 70px;
+}
+
+.message.right {
+	align-self: flex-end;
+	padding: 15px 70px 15px 20px;
+}
+
+.logo {
+	border-radius: 50%;
+	box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.7);
+	object-fit: cover;
+	position: absolute;
+	left: 10px;
+	top: -10px;
+	width: 50px;
+	height: 50px;
+}
+
+.message.right .logo {
+	left: auto;
+	right: 10px;
+}
+
+.message p {
+	margin: 0;
+}
+
+.text_input {
+	font-size: 16px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px 15px;
+	width: 100%;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+#left {
+	bottom: 25%;
+	position: absolute;
+	animation: dance 2s linear infinite;
+  }
+  
+  @keyframes dance {
+	0% {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform: translateX(-15px);
+	}
+	100% {
+	  transform: translateX(0);
+	}
+	
+  }
+  /* Style the input element */
+#questionid {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	outline: none;
+	transition: border-color 0.3s;
+  }
+  
+  /* Add a smooth border color transition on focus */
+  #questionid:focus {
+	border-color: black;
+  }
+  #logorotate {
+	animation: rotateImage 2s linear ; /* Apply the rotation animation */
+  }
+  
+  @keyframes rotateImage {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(360deg);
+	}
+  }
+  #scrollable-div {
+	width: 500px; /* Set the width of the scrollable div */
+	height: 500px; /* Set the height of the scrollable div */
+	border: 1px solid #ccc; /* Add a border for visual clarity */
+	overflow: auto; /* Make the content scrollable */
+}
+</style>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2>Ask any question <br /> Our chatbot is here to answer them</h2>
+<div class="chat-container" id="scrollable-div">
+	<ul class="chat">
+		<li class="message left">
+			<img class="logo" id="logorotate" src="../static/images/chatbot-icon.jpg" alt="">
+			<p>Hello, How can I help you?</p>
+		</li>
+		<!--<li class="message right">
+			<img class="logo" src="https://randomuser.me/api/portraits/men/67.jpg" alt="">
+			<p></p>
+		</li>-->
+	</ul>
+	<br/><br/><br/><br/>
+	<input type="text" class="question" id="questionid" placeholder="Enter any question related to online frauds here..." autofocus/>
+</div>
+
+<footer>
+
+</footer>
+<!-- partial -->
+
+<script>
+	function validate(e) {
+		var text = e.target.value;
+    // Check if the length of the text is greater than 1
+    if (text.length >= 1) {
+     return 1;
+    } 
+	else{
+		return 0;
+	}
+	}
+	$(document).ready(function () {
+		var text = document.getElementById("questionid");
+		text.addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+				var flag=validate(e);
+				$("ul").append("<li class='message right'><img class='logo' src='../static/images/humanquery.jpg' alt=''><p>"+text.value+"</p></li>");
+				if(flag){
+				$("ul").append("<li class='message left' id='left'><img class='logo' src='../static/images/chatbot-icon.jpg' alt=''><p>"+"..."+"</p></li>");
+				$.ajax({
+						url: '/get_data',
+						type: 'POST',
+						dataType: 'json',
+						data: { "query": text.value },
+						success: function (data) {
+                        $("#left").remove();
+						$("ul").append("<li class='message left'><img class='logo' src='../static/images/chatbot-icon.jpg' alt=''><p>"+data+"</p></li>");
+						text.value = "";	
+					},
+						error: function (error) {
+							console.log('Error:', error);
+						}
+					});
+				}
+			}});
+	});
+</script>
+  
+</body>
+</html>
