@@ -33,3 +33,14 @@
 .question-container{
     margin-bottom: 2em;
 }
+
+.image-question {
+
+    border:1px solid rgba(0, 0, 0, 0.103);
+    border-radius: 1px;
+}
+
+.image-question-buttons{
+
+    gap: 2em;
+}
