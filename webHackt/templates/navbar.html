@@ -31,6 +31,10 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+    {% block css %} 
+    {% endblock %}         
+
     <!--
 
 TemplateMo 583 Festava Live
@@ -121,7 +125,7 @@ https://templatemo.com/tm-583-festava-live
             </div>
         </nav>
 
-        
+
         {% block content %} 
         {% endblock %}         
 
@@ -294,6 +298,8 @@ T e m p l a t e M o
     <script src="static/js/jquery.sticky.js"></script>
     <script src="static/js/click-scroll.js"></script>
     <script src="static/js/custom.js"></script>
+    {% block js %} 
+    {% endblock %}   
 
 </body>
 
