@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <title>Our chatbot</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+   <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="static/css/templatemo-festava-live.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 	@import url('https://fonts.googleapis.com/css?family=Lato');
 
@@ -33,6 +48,9 @@ h2 {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
+	font-size: 1.3rem;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 .chat-container {
@@ -175,7 +193,7 @@ footer a {
   }
   #scrollable-div {
 	width: 500px; /* Set the width of the scrollable div */
-	height: 500px; /* Set the height of the scrollable div */
+	height: 400px; /* Set the height of the scrollable div */
 	border: 1px solid #ccc; /* Add a border for visual clarity */
 	overflow: auto; /* Make the content scrollable */
 }
@@ -183,6 +201,39 @@ footer a {
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<i class="fa fa-shield" aria-hidden="true" style="font-size:60px; margin-right:20px; color:white;"></i>
+			<a class="navbar-brand" href="index.html">
+				Online Fraud Awareness
+			</a>
+	
+			<!--<a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a>-->
+	
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+					<li class="nav-item">
+						<a class="nav-link click-scroll" href="{{ url_for('hello') }}">Home</a>
+					</li>
+	
+	
+					<li class="nav-item">
+						<a class="nav-link click-scroll" href="{{ url_for('chatbot') }}">Chat Bot</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link click-scroll" href="{{ url_for('quiz') }}" >Take Quiz</a>
+					</li>
+				</ul>
+	
+			   <!-- <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Take Quiz</a>-->
+			</div>
+		</div>
+	</nav>
 <!-- partial:index.partial.html -->
 <h2>Ask any question <br /> Our chatbot is here to answer them</h2>
 <div class="chat-container" id="scrollable-div">
