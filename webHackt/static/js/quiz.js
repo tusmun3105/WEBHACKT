@@ -27,7 +27,7 @@ const questions = [
         type : "text",
         choices: [" Delete the phishing email.", "Try to give money", "Unplug the computer.This will get rid of any malware", "Change any compromised passwords."],
         correctAnswer: "Change any compromised passwords.",
-        message:'Change any compromised passwords.'
+        message:'Changing any compromised passwords is a crucial step to secure your accounts and prevent unauthorized access'
     },
     {
         question: "Is this a scam?",
